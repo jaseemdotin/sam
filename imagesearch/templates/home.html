@@ -1,0 +1,94 @@
+{% extends "_base.html" %}<b></b>
+{% block content %}
+<div class="container-fluid">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="mdbtn">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="col-sm-12">
+                <h4>Preview</h4>
+                <div class="col-sm-3" id="ogimg">
+
+                </div>
+                <div class="col-sm-9"></div>
+            </div>
+            <h4>Result</h4>
+            <div id="results" class="search-results">
+
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-sm-12 m-2">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="card m-4">
+                    <div class="card-box p-4">
+                        <form action="" method="POST" id="forms">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group p-2">
+                                            <label for="" class="">File</label>
+                                            <input type="file" name="" id="image" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group p-2">
+                                            <label for="" class="">Output limit</label>
+                                            <input type="number" name="" id="limit" class="form-control" min="00" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group p-2">
+                                            <label for="" class="">Min score</label>
+                                            <input type="number" name="" id="min" class="form-control" min="00" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group p-2">
+                                            <label for="" class="">Max Score</label>
+                                            <input type="number" name="" id="max" class="form-control" max="100" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                       <div class="form-group">
+                                        <input type="submit" value="Search" class="col-12 btn btn-primary">
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
